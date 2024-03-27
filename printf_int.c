@@ -3,6 +3,26 @@
 #include <stdlib.h>
 #include "main.h"
 /**
+ * _reverse - Reverses a string.
+ * @str: Given string.
+ * @n: Length of string.
+ * Return: Reversed string.
+ */
+char *_reverse(char *str, int n)
+{
+	int i, temp;
+
+	n--;
+	for (i = 0; i <= n; i++, n--)
+	{
+		temp = str[i];
+		str[i] = str[n];
+		str[n] = temp;
+	}
+
+	return (str);
+}
+/**
  * _iota - Writes an integer into a string.
  * @value: Int number.
  * Return: Converted value.
