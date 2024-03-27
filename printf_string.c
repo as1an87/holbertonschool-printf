@@ -1,7 +1,7 @@
 #include "main.h"
 #include <unistd.h>
 #include <stddef.h>
-int print_string(va_list ap, int *len)
+int printf_string(va_list ap, int *len)
 {
 	int j;
 	char*str;
