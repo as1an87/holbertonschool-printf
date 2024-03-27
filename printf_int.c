@@ -7,7 +7,7 @@
  *
  */
 
-void printf_int(va_list ptr, int *len)
+int printf_int(va_list ptr, int *len)
 {
 	unsigned int i = 1;
 	int n = va_arg(ptr, int);
@@ -25,11 +25,13 @@ void printf_int(va_list ptr, int *len)
 	}
 	for (; i != 1; i /= 10)
 	{
-		_putchar((number / i) + '0');
+		_puitchar((number / i) + '0');
 
 		n = n % i;
 	}
 	(*len)++;
 	_putchar((n % 10) + '0');
+
+	return (len);
 }
 
