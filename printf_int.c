@@ -1,4 +1,6 @@
 #include <stdarg.h>
+#include <unistd.h>
+#include <stdlib.h>
 #include "main.h"
 /**
  * printf_int - print int
@@ -7,31 +9,17 @@
  *
  */
 
-int printf_int(va_list ptr, int *len)
+int  printf_int(va_list value, int *len)
 {
-	unsigned int i = 1;
-	int n = va_arg(ptr, int);
+	char *str = _itoa(va_arg(value, int));
+		
+	int j = 0;
+        while (str[j] != '\0')
+        {
+                (*len) += write(1, &str[j], 1);
+                j++;
+        }
+        return (*len);
+	
 
-	if (n < 0)
-	{
-		n = -n;
-		(*len)++;
-		_putchar('-');
-	}
-	while ((n / i) / 10 != 0)
-	{
-		i = i * 10;
-		(*len)++;
-	}
-	for (; i != 1; i /= 10)
-	{
-		_puitchar((number / i) + '0');
-
-		n = n % i;
-	}
-	(*len)++;
-	_putchar((n % 10) + '0');
-
-	return (len);
 }
-
