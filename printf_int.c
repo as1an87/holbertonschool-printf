@@ -1,7 +1,27 @@
 #include <stdarg.h>
 #include <unistd.h>
+#include <limits.h>
 #include <stdlib.h>
 #include "main.h"
+
+/**
+ * _abs - Gets the absolute value of a number.
+ * @n: Number.
+ * Return: Absolute value of n.
+ */
+
+unsigned int _abs(int n)
+{
+	unsigned int i;
+	if (n < 0)
+	{
+		i = n * -1;
+	}
+	else
+		i = n;
+
+	return (i);
+}
 /**
  * _iota - Writes an integer into a string.
  * @value: Int number.
