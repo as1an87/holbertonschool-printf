@@ -3,6 +3,47 @@
 #include <stdlib.h>
 #include "main.h"
 /**
+ * _iota - Writes an integer into a string.
+ * @value: Int number.
+ * Return: Converted value.
+ *
+ */
+char *_itoa(int value)
+{
+	char buffer[1024];
+	unsigned int n;
+	int i;
+	if (value == INT_MIN)
+	{
+		n = (unsigned int)INT_MAX + 1;
+	}
+	else
+	{
+		n = _abs(value);
+	}
+	i = 0;
+	while (n)
+	{
+		int r = n % 10;
+		buffer[i] = 48 + r;
+		i++;
+		n = n / 10;
+	}
+	if (i == 0)
+	{
+		buffer[i] = '0';
+		i++;
+	}
+	if (value < 0)
+	{
+		buffer[i] = '-';
+		i++;
+	}
+	buffer[i] = '\0';
+	return (_reverse(buffer, i));
+}
+
+/**
  * printf_int - print int
  * @ptr: pointer to the va_list containing the string
  * @len: pointer to the length counter
