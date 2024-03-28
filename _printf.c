@@ -36,6 +36,13 @@ int _printf(const char *format, ...)
 				ch = '%';
 				num += write(1, &ch, 1);
 			}
+			else
+			{
+				ch = '%';
+				num += write(1, &ch, 1);
+				ch = format[i];
+				num += write(1, &ch, 1);
+			}
 		}
 		else
 		{
