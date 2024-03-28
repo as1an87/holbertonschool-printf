@@ -1,6 +1,13 @@
 #include "main.h"
 #include <unistd.h>
 #include <stddef.h>
+/**
+ * print_string - prints string.
+ * @ap: va_list.
+ * @len: length of string.
+ * Return: 1
+ */
+
 int printf_string(va_list ap, int *len)
 {
 	int j;

@@ -13,6 +13,7 @@
 unsigned int _abs(int n)
 {
 	unsigned int i;
+
 	if (n < 0)
 	{
 		i = n * -1;
@@ -22,12 +23,14 @@ unsigned int _abs(int n)
 
 	return (i);
 }
+
 /**
  * _reverse - Reverses a string.
  * @str: Given string.
  * @n: Length of string.
  * Return: Reversed string.
  */
+
 char *_reverse(char *str, int n)
 {
 	int i, temp;
@@ -42,17 +45,20 @@ char *_reverse(char *str, int n)
 
 	return (str);
 }
+
 /**
  * _iota - Writes an integer into a string.
  * @value: Int number.
  * Return: Converted value.
  *
  */
+
 char *_itoa(int value)
 {
 	char buffer[1024];
 	unsigned int n;
 	int i;
+
 	if (value == INT_MIN)
 	{
 		n = (unsigned int)INT_MAX + 1;
@@ -65,6 +71,7 @@ char *_itoa(int value)
 	while (n)
 	{
 		int r = n % 10;
+
 		buffer[i] = 48 + r;
 		i++;
 		n = n / 10;
@@ -89,6 +96,7 @@ char *_itoa(int value)
  * @len: Number of printed characters.
  * Return: num.
  */
+
 int printf_int_helper(char *st, int *num)
 {
 	int j = 0;
@@ -112,5 +120,6 @@ int printf_int_helper(char *st, int *num)
 void  printf_int(va_list value, int *len)
 {
 	char *str = _itoa(va_arg(value, int));
+
 	printf_int_helper(str, len);
 }
