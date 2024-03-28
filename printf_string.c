@@ -11,10 +11,10 @@
 int printf_string(va_list ap, int *len)
 {
 	int j;
-	char*str;
+	char *str;
 
 	str = va_arg(ap, char *);
-	if(str == NULL)
+	if (str == NULL)
 		str = "(null)";
 
 	j = 0;
