@@ -1,0 +1,85 @@
+.TH _PRINTF 3 "March 2024" "PRINTF"
+.SH NAME
+_printf \- generates output based on a specified format
+
+.SH SYNOPSIS
+.B #include <stdarg.h>
+.B #include <stdlib.h>
+.B #include <unistd.h>
+.B #include "main.h"
+.PP
+.B int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+The \fB_printf\fR function is a custom implementation of the printf function.
+It accepts a format string and a variable number of arguments based on the
+conversion specifiers present in the format string. The function then generates
+output according to the format specified.
+
+.PP
+Supported conversion specifiers:
+.TP
+\fB%c\fR
+Prints a single character.
+.TP
+\fB%s\fR
+Prints a null-terminated string.
+.TP
+\fB%d, %i\fR
+Prints a signed decimal integer.
+.TP
+\fB%%\fR
+Prints a literal '%' character.
+
+.SH RETURN VALUE
+On success, the function returns the total number of characters written.
+On failure, -1 is returned if no characters are written.
+
+.SH EXAMPLES
+.PP
+CODE:
+.B _printf("Displaying a straightforward sentence.\n");
+.PP
+OUTPUT:
+Displaying a straightforward sentence.
+(newline character included!)
+This code snippet yields the length of the output (31)
+
+.PP
+CODE:
+.B _printf("%s", "This sentence is extracted from va_args!\n");
+.PP
+OUTPUT:
+This sentence is extracted from va_args!
+(newline character included!)
+This code snippet yields the length of the output (41)
+
+.PP
+CODE:
+.B _printf("The value of pi is approximately: %.2f\n", 3.14159);
+.PP
+OUTPUT:
+The value of pi is approximately: 3.14
+This code snippet demonstrates the formatting capabilities of _printf.
+
+.SH SEE ALSO
+.BR printf(3),
+.BR man(1)
+
+.SH AUTHOR
+Aslan Aslanov @as1an87
+Narmin Mammadova @mammadova04
+
+.SH BUGS
+None known.
+
+.SH COPYRIGHT
+Copyright Owner
+
+.SH NOTES
+This function is designed to be a lightweight alternative to printf,
+suitable for use in embedded systems or environments where standard
+library functions may be restricted.
+
+\fBman man\fR
+
