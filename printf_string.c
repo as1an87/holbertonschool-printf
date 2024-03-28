@@ -2,7 +2,7 @@
 #include <unistd.h>
 #include <stddef.h>
 /**
- * print_string - prints string.
+ * printf_string - prints string.
  * @ap: va_list.
  * @len: length of string.
  * Return: 1

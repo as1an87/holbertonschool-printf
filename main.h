@@ -10,5 +10,6 @@ char *_itoa(int value);
 int printf_helper(char *st, int *num);
 unsigned int _abs(int n);
 char *_reverse(char *str, int n);
+int helper(char m);
 
 #endif

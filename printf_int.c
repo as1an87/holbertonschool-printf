@@ -3,13 +3,11 @@
 #include <limits.h>
 #include <stdlib.h>
 #include "main.h"
-
 /**
  * _abs - Gets the absolute value of a number.
  * @n: Number.
  * Return: Absolute value of n.
  */
-
 unsigned int _abs(int n)
 {
 	unsigned int i;
@@ -23,14 +21,12 @@ unsigned int _abs(int n)
 
 	return (i);
 }
-
 /**
  * _reverse - Reverses a string.
  * @str: Given string.
  * @n: Length of string.
  * Return: Reversed string.
  */
-
 char *_reverse(char *str, int n)
 {
 	int i, temp;
@@ -47,7 +43,7 @@ char *_reverse(char *str, int n)
 }
 
 /**
- * _iota - Writes an integer into a string.
+ * *_itoa - Writes an integer into a string.
  * @value: Int number.
  * Return: Converted value.
  *
@@ -91,9 +87,9 @@ char *_itoa(int value)
 }
 
 /**
- * print_int_string - helper function for int
+ * printf_int_helper - helper function for int
  * @st: Given number.
- * @len: Number of printed characters.
+ * @num: Number of printed characters.
  * Return: num.
  */
 
@@ -111,10 +107,10 @@ int printf_int_helper(char *st, int *num)
 }
 
 /**
- * printf_int - print int
- * @ptr: pointer to the va_list containing the string
- * @len: pointer to the length counter
- *
+ * printf_int - prints an integer.
+ * @value: va_list.
+ * @len: length of string.
+ * Return: Void.
  */
 
 void  printf_int(va_list value, int *len)
