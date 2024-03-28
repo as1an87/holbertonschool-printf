@@ -3,12 +3,22 @@
 #include <unistd.h>
 #include "main.h"
 
-void helper (char m)
+/**
+ * helper - a helper function
+ * @m: char
+ * Return: number of characters printed
+ */
+
+int helper(char m)
 {
-		ch = '%';
-		num += write(1, &ch, 1);
-		ch = m;	
-		num += write(1, &ch, 1);
+	char ch;
+	int k = 0;
+
+	ch = '%';
+	k += write(1, &ch, 1);
+	ch = m;
+	k += write(1, &ch, 1);
+	return (k);
 }
 /**
  * _printf - a function that produces output according to a format
@@ -44,7 +54,7 @@ int _printf(const char *format, ...)
 				num += write(1, &ch, 1);
 			}
 			else
-				helper(format[i]);
+				num += helper(format[i]);
 		}
 		else
 		{
