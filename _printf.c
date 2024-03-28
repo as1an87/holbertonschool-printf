@@ -3,6 +3,13 @@
 #include <unistd.h>
 #include "main.h"
 
+void helper (char m)
+{
+		ch = '%';
+		num += write(1, &ch, 1);
+		ch = m;	
+		num += write(1, &ch, 1);
+}
 /**
  * _printf - a function that produces output according to a format
  * @format: is a character string
@@ -37,12 +44,7 @@ int _printf(const char *format, ...)
 				num += write(1, &ch, 1);
 			}
 			else
-			{
-				ch = '%';
-				num += write(1, &ch, 1);
-				ch = format[i];
-				num += write(1, &ch, 1);
-			}
+				helper(format[i]);
 		}
 		else
 		{
