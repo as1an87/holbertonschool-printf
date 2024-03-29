@@ -11,9 +11,8 @@ Custom Printf Implementation
 
 **Table of Contents**
 ----------------------
-1. Usage
-2. Example
-3. Authors
+Usage
+Authors
 
 **Usage**
 ----------
@@ -36,33 +35,6 @@ man _printf
 Alternatively, you can execute the provided script:
 
 ./man_3_printf
-
-
-**Example**
---------------
-#include "main.h"
-
-/**
- * main - Entry point
- * Return: Always 0
- */
-int main(void)
-{
-	char *str = "Holberton";
-	char c = 'A';
-	int num = 101;
-
-	_printf("Character: %c\n", c);
-	_printf("String: %s\n", str);
-	_printf("Integer: %d\n", num);
-
-	return (0);
-}
-
-Output:
-Character: A
-String: Holberton
-Integer: 101
 
 **Authors**
 -------------
