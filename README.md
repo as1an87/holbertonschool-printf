@@ -40,4 +40,3 @@ Alternatively, you can execute the provided script:
 -------------
 - Narmin Mammadova (mammadova04)
 - Aslan Aslanov (as1an87)
-
