@@ -17,21 +17,26 @@ Custom Printf Implementation
 
 **Usage**
 ----------
+
 Function Prototype:
 
 int _printf(const char *format, ...);
+
 
 To utilize our custom printf function, include the header file "main.h":
 
 #include "main.h"
 
+
 For accessing the manual page of _printf, use the `man` command in your terminal:
 
 man _printf
 
+
 Alternatively, you can execute the provided script:
 
 ./man_3_printf
+
 
 **Example**
 --------------
@@ -43,19 +48,18 @@ Alternatively, you can execute the provided script:
  */
 int main(void)
 {
-    char *str = "Holberton";
-    char c = 'A';
-    int num = 101;
+	char *str = "Holberton";
+	char c = 'A';
+	int num = 101;
 
-    _printf("Character: %c\n", c);
-    _printf("String: %s\n", str);
-    _printf("Integer: %d\n", num);
+	_printf("Character: %c\n", c);
+	_printf("String: %s\n", str);
+	_printf("Integer: %d\n", num);
 
-    return (0);
+	return (0);
 }
 
 Output:
-
 Character: A
 String: Holberton
 Integer: 101
